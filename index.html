@@ -21,6 +21,7 @@
                 <option value="caesar">Caesar</option>
                 <option value="base64">Base64</option>
             </select>
+            <input type="number" id="inc" placeholder="Escolha sua chave">
 
             <div id="bolinha">
                 <input type="radio" name="codifdecod" id="radioCodificar">
@@ -29,7 +30,7 @@
                 <label>Decodificar</label>
             </div>
             <textarea id="texto" name="escrita-inicial" placeholder="Escreva Aqui!" onkeyup="codifica()"></textarea>
-            <textarea id="resultadoTexto" placeholder="Resultado Aqui!" readonly></textarea>
+            <textarea id="resultadoTexto" placeholder="Resultado Aqui!" readonly style="cursor: auto;"></textarea>
 
         </form>
 

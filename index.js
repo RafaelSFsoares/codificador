@@ -13,10 +13,12 @@ function cifraCesar() {
   var resultado = '';
 
   for (var i = 0; i < letra.length; i++) {
+    var incremento = document.getElementById('inc').value;
+    var incrementoNumero = Number(incremento)
     var posicaoDaLetraNoAlfabeto = letra.charCodeAt(i) - 64;
     console.log(posicaoDaLetraNoAlfabeto)
 
-    var letraComDeslocamento = (posicaoDaLetraNoAlfabeto + 1) % 26;
+    var letraComDeslocamento = (posicaoDaLetraNoAlfabeto + incrementoNumero) % 26;
     resultado += alfabeto[letraComDeslocamento - 1];
     document.getElementById('resultadoTexto').innerHTML = resultado;
 
@@ -37,12 +39,6 @@ function formBase64() {
   else {
       saida.innerHTML = atob(entrada);
   }
-//   if (decodiCodi == 'resultadoTexto') {
-//       saida.innerHTML = atob(texto);
-//   }
-//   else {
-//       saida.innerHTML = btoa(texto);
-//   }
 }
 
 
