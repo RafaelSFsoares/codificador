@@ -1,17 +1,30 @@
+body {
+    display: flex;
+    background-image: url('./img/imagemDeFundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .container{ 
     display: flex;
     justify-content: center;
-    border: 3px solid black;
-    background: #ffc814;    
-    margin: 15px auto;
+    border: 1px solid cornsilk;
+    background: rgb(115, 185, 10);    
+    position: absolute;
+    top: 30%;
+    left: 30%;
     padding: 10px 50px;
     border-radius: 10px;
-    box-shadow: 2px 2px  rgb(0, 0, 0);
+    box-shadow: 2px 2px 50px 2px cornsilk; 
+    width: 35%;   
+    
 }
 
 .container-menu {
     display: flex;
     flex-direction: column;
+    
     
 } 
 
