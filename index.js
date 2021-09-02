@@ -28,19 +28,21 @@ function formBase64() {
   var decodiCodi = document.getElementById('codificar').value;
   var entrada = document.getElementById('texto').value;
   var saida = document.getElementById('resultadoTexto');
+  
+  console.log(decodiCodi.value)
 
-  if (decodiCodi == '') {
+  if (document.getElementById('radioCodificar').checked) {
       saida.innerHTML = btoa(entrada);
   }
   else {
       saida.innerHTML = atob(entrada);
   }
-  // if (decodiCodi == 'decode') {
-  //     saida.innerHTML = atob(texto);
-  // }
-  // else {
-  //     saida.innerHTML = btoa(texto);
-  // }
+//   if (decodiCodi == 'resultadoTexto') {
+//       saida.innerHTML = atob(texto);
+//   }
+//   else {
+//       saida.innerHTML = btoa(texto);
+//   }
 }
 
 
