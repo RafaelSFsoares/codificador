@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caesar Cipher</title>
+        <meta charset="UTF-8">
+        <style>
+            button {
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;
+                background-color: orange;
+                border-color: lightsalmon;
+            }
+            #big {
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <span id="label">Key: </span>
+        <button onclick="prev()">-</button>
+        <span id="key">1</span>
+        <button onclick="next()">+</button><br/><br/>
+        <input type="text" id="input"/>
+        <button onclick="calculate()" id="big">Calculate</button>
+        <span id="output"></span>
+        <script>
+            var values = new Array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+            var key = document.getElementById("key").innerHTML;
+            function prev() {
+                if(key > 1) {
+                    key--;
+                    document.getElementById("key").innerHTML = key;
+                }
+            }
+            function next() {
+                if(key < 25) {
+                    key++;
+                    document.getElementById("key").innerHTML = key;
+                }
+            }
+            function calculate() {
+                var input = document.getElementById("input").value;
+                var a = 0;
+                while(a < input.lenght) {
+                    if(a + key < 26) {
+                        c = a + key;
+                    } else {
+                        c = a + key - 26;
+                    }
+                    var b = 0;
+                    while(b < input.length) {
+                        input = input.replace(values[a], values[c]);
+                        b++;
+                    }
+                    a++;
+                }
+                document.getElementById("output").innerHTML = input;
+            }
+        </script>
+    </body>
+</html>
